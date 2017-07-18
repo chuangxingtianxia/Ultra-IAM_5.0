@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- 告诉浏览器响应屏幕宽度 -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+	<title>添加客户端</title>
+	<!-- Bootstrap 3.3.6 -->
+	<link href="../../static/assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<!-- 表单验证 -->
+	<link href="../../static/assets/bootstrapvalidator/css/bootstrapValidator.css" rel="stylesheet" type="text/css">
+	<!-- Font Awesome 字体图标 -->
+	<link href="../../static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+	<!--表单下拉框select样式插件-->
+	<link href="../../static/assets/select2/css/select2.css" rel="stylesheet" type="text/css">
+	<!--表单元素样式插件-->
+	<link href="../../static/assets/icheck/skins/default/blue.css" rel="stylesheet"  type="text/css">
+	<link href="../../static/assets/icheck/ext/skins/default/niceCheck.css" rel="stylesheet"  type="text/css">
+	<!--日期插件-->
+	<link href="../../static/assets/pikaday/css/pikaday.css" rel="stylesheet" type="text/css">
+	<!-- CSS初始化 -->
+	<link href="../../static/css/base.css" rel="stylesheet" type="text/css">
+	<!-- 公用样式 -->
+	<link href="../../static/css/main.css" rel="stylesheet" type="text/css">
+	<!--  让IE8支持HTML5元素和媒体查询  -->
+	<!-- 警告：如果通过本地file：//打开页面 ，Respond.js将无法正常工作 -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body class="whiteBg">
+<div class="layer-content-wrap">
+
+	<div class="layer-content">
+		<form id="defaultForm" method="post" action="">
+
+			<div  class="form-section">
+				<div class="form-section-content row">
+					<div class="form-item col-xs-6">
+						<div class="form-label">软件名称&nbsp;&nbsp;：</div>
+						<div class="form-group">
+							<div class="form-input">
+								<input class="form-control" name="clientName" id="clientName"  type="text">
+							</div>
+							<div class="form-note">不超过50个字符，只允许包含字母、汉字、数字和下划线</div>
+						</div>
+					</div>
+					<div class="form-item col-xs-6">
+						<div class="form-label">软件标识&nbsp;&nbsp;：</div>
+						<div class="form-group">
+							<div class="form-input">
+								<input type="text" class="form-control" id="softFlag" name="softFlag">
+							</div>
+							<div class="form-note">不超过50个字符，只允许包含字母、汉字、数字和下划线</div>
+						</div>
+					</div>
+
+					<div class="form-item col-xs-12">
+						<div class="form-label">支持资源类型&nbsp;&nbsp;：</div>
+						<div class="form-group">
+							<div class="form-check">
+								<input name="resDevTypes" type="checkbox" data-text="UNIX主机/Telnet " checked  />
+								<input name="resDevTypes" type="checkbox" data-text="UNIX主机/SSH" />
+								<input name="resDevTypes" type="checkbox" data-text="UNIX主机/X-Windows " />
+								<input name="resDevTypes" type="checkbox" data-text="UNIX主机/FTP" />
+								<input name="resDevTypes" type="checkbox" data-text="UNIX主机/SFTP " />
+								<input name="resDevTypes" type="checkbox" data-text="UNIX主机/SSH1 " />
+								<input name="resDevTypes" type="checkbox" data-text="网络设备/Telnet  " />
+								<input name="resDevTypes" type="checkbox" data-text="网络设备/SSH" />
+								<input name="resDevTypes" type="checkbox" data-text="网络设备/FTP " />
+								<input name="resDevTypes" type="checkbox" data-text="网络设备/SFTP" />
+								<input name="resDevTypes" type="checkbox" data-text="网络设备/SSH1 " />
+								<input name="resDevTypes" type="checkbox" data-text="网元/OMC" />
+								<input name="resDevTypes" type="checkbox" data-text="网元/Telnet " />
+								<input name="resDevTypes" type="checkbox" data-text="网元/SSH" />
+								<input name="resDevTypes" type="checkbox" data-text="网元/FTP " />
+								<input name="resDevTypes" type="checkbox" data-text="网元/SFTP " />
+							</div>
+						</div>
+					</div>
+					<div class="form-item col-xs-6">
+						<div class="form-label">软件类型&nbsp;&nbsp;：</div>
+						<div class="form-group">
+							<div class="form-select">
+								<select class="select" name="clientType">
+									<option value="" >请选择</option>
+									<option value="1">类型1</option>
+									<option value="2">类型2</option>
+									<option value="3">类型3</option>
+									<option value="4">类型4</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="form-item col-xs-6">
+						<div class="form-label">选择日期&nbsp;&nbsp;：</div>
+						<div class="form-group">
+							<div class="form-input">
+								<input id="valid_data" type="text" name="clientData" class="form-control">
+							</div>
+						</div>
+
+					</div>
+
+					<div class="form-item col-xs-6">
+						<div class="form-label">是否支持路径&nbsp;&nbsp;：</div>
+						<div class="form-group">
+							<div class="form-check">
+								<input name="isNeedPath" type="radio" id="isNeedPath" data-text="是" checked  />
+								<input name="isNeedPath" type="radio" id="isNeedPath1" data-text="否" />
+							</div>
+						</div>
+					</div>
+
+					<div class="form-item col-xs-6">
+						<div class="form-label">是否默认软件&nbsp;&nbsp;：</div>
+						<div class="form-group">
+							<div class="form-check">
+
+								<input name="isDefalt" type="radio" id="isDefalt" data-text="是" checked  />
+								<input name="isDefalt" type="radio" id="isDefalt1" data-text="否" />
+
+							</div>
+						</div>
+					</div>
+
+					<div class="form-item col-xs-12">
+						<div class="form-label"><span>信息描述&nbsp;&nbsp;：</span></div>
+						<div class="form-group">
+							<div class="form-input">
+								<textarea class="form-control"  name="clientDescription" id="clientDescription"></textarea>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+<div class="layer-footer-wrap">
+	<div class="footer-btn">
+		<button class="btn btn-primary" type="button" id="save_btn"><i class="fa fa-floppy-o" style=""></i><span>保存</span></button>
+		<button class="btn btn-default" type="button" id="resetBtn"><i class="fa fa-ban" style=""></i><span>重置</span></button>
+	</div>
+</div>
+
+<!-- jQuery -->
+<script src="../../static/assets/jQuery/jquery-1.12.4.min.js"></script>
+<!--bootstrap框架-->
+<script src="../../static/assets/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<!--layer-->
+<script src="../../static/assets/layer/layer.js" type="text/javascript"></script>
+<!--表单检验-->
+<script src="../../static/assets/bootstrapvalidator/js/bootstrapValidator.min.js" type="text/javascript"></script>
+<!--表单下拉框select样式插件-->
+<script src="../../static/assets/select2/js/select2.full.js" type="text/javascript"></script> <!--表单元素样式插件-->
+<script src="../../static/assets/icheck/icheck.js" type="text/javascript"></script>
+<script src="../../static/assets/icheck/ext/niceCheck.js" type="text/javascript"></script>
+<!--日期插件-->
+<script src="../../static/assets/moment/moment-with-locales.js" type="text/javascript"></script>
+<script src="../../static/assets/pikaday/pikaday.js" type="text/javascript"></script>
+<!--公用js-->
+<script type="text/javascript" src="../../static/scripts/common/common.js"></script>
+<!--独立js-->
+<script type="text/javascript" src="js/manager.js"></script>
+<script>
+	$(document).ready(function() {
+		var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+		$('#defaultForm')
+				.bootstrapValidator({
+					message: 'This value is not valid',
+					feedbackIcons: {/*输入框不同状态，显示图片的样式*/
+						valid: 'glyphicon glyphicon-ok',
+						invalid: 'glyphicon glyphicon-remove',
+						validating: 'glyphicon glyphicon-refresh'
+					},
+					fields: {
+						clientName: {
+							message: '软件名称格式不合法',
+							validators: {
+								notEmpty: {/*非空提示*/
+									message: '软件名称不能为空'
+								},
+								stringLength: {/*长度提示*/
+									min: 1,
+									max: 30,
+									message: '软件名称长度必须在1-30之间'
+								},
+								regexp: {/*正则表达式验证*/
+									regexp: /^[a-zA-Z0-9_\.]+$/,
+									message: '软件名称只能是字母数字下划线句点组合'
+								}
+							}
+						},
+						softFlag: {
+							message: '软件标识不合法',
+							validators: {
+								notEmpty: {
+									message: '软件标识不能为空'
+								},
+								stringLength: {
+									min: 1,
+									max: 30,
+									message: '软件标识长度必须在1-30之间'
+								},
+								regexp: {
+									regexp: /^([0-9]|[a-zA-Z\u4E00-\u9FA5]|[-_\.()])+$/,
+									message: '软件标识必须是字母数字中文以及以下特殊字符-_.()'
+								}
+							}
+						},
+						clientDescription: {
+							message: '描述信息格式不合法',
+							validators: {
+								stringLength: {
+									max: 200,
+									message: '描述信息必须小于200个字'
+								},
+								regexp: {
+									regexp: /^([0-9]|[a-zA-Z\u4E00-\u9FA5]|[_\\\.]|[-@!#$%^&()/])+$/,
+									message: '描述信息格式不正确'
+								}
+							}
+						}
+					}
+				})
+				.on('error.form.bv', function(e) {
+					//console.log('error.form.bv');
+					//var $form = $(e.target);
+					//console.log($form.data('bootstrapValidator').getInvalidFields());
+
+					parent.layer.msg("检验失败，请仔细检查",{ icon:2 });
+
+				})
+				.on('success.form.bv', function(e) {
+
+					// Prevent form submission
+					e.preventDefault();
+
+					// Get the form instance
+					var $form = $(e.target);
+					var datas =  $form.serialize();
+					Manager.add(datas, function (ret) {
+
+						if (ret.success == true) {
+								$form.data('bootstrapValidator').resetForm(true);
+								parent.layer.close(index);
+								window.parent.reloadTable();
+								parent.layer.msg('添加成功',{icon: 1});
+
+						}else {
+							parent.layer.msg("添加失败，失败原因是："+ret.resultMsg,{ icon:2 });
+						}
+					});
+
+					/*	var bv = $form.data('bootstrapValidator');
+					 bv.bootstrapValidator('resetForm');*/
+
+
+				})
+
+		niceForm("#defaultForm");
+		createPikaday('valid_data')
+	});
+
+
+	$('#save_btn').click(function() {
+		$('#defaultForm').bootstrapValidator('validate');
+	});
+
+	$('#resetBtn').click(function() {
+		$('#defaultForm').data('bootstrapValidator').resetForm(true);
+	});
+
+</script>
+</body>
+</html>

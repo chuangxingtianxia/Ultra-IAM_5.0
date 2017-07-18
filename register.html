@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>注册</title>
+  <!-- Bootstrap 3.3.6 -->
+  <!--<link href="static/assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">-->
+  <!-- Font Awesome 字体图标 -->
+  <link href="static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+  <!-- 阿里巴巴 字体图标 -->
+  <!--<link href="static/assets/iconfont/css/iconfont.css" rel="stylesheet" type="text/css">-->
+  <link href="//at.alicdn.com/t/font_idnvgvgjxvwjyvi.css" rel="stylesheet" type="text/css">
+  <!-- CSS初始化 -->
+  <link href="static/css/base.css" rel="stylesheet" type="text/css">
+  <link href="static/css/reg.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+  <div class="register-wrapper">
+      <div class="register-header">
+        <div class="header-content">
+            <a href="" class="logo">
+              <i class="iconfont icon-mobsecyidonganquan"></i><b>Ultra-IAM</b>V5.0
+            </a>
+          <span class="switch-login">
+				<a href="#" title="登录" target="_blank">首页</a>
+			</span>
+          <div class="nav-item-warp">
+            <div class="nav-item">
+              <a class="nav-item-inner" href="#">
+                <i class="fa fa-language" aria-hidden="true"></i>
+                <span class="nav-text">简体中文</span>
+              </a>
+
+              <div class="dropdown-menu-topbar" style="display: none;">
+                <div class="dropdown-menu-inner">
+                  <ul>
+                    <li class="dropdown-menu-item"><a href="#"><span class="lang-text"><i class="fa fa-flag-o" aria-hidden="true"></i>简体中文</span></a>
+                    </li>
+                    <li class="dropdown-menu-item"><a href="#"><span class="lang-text"><i class="fa fa-etsy" aria-hidden="true"></i>English</span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="register-body">
+        <div class="reg-title"> 欢迎使用4A账号注册服务 </div>
+        <div class="register-form">
+          <div class="register-content">
+            <div class="pass-item">
+              <div class="input-wrap">
+                <input id="name"  class="input-text" value=""  type="text">
+                <label class="input-label"  for="name"  style="opacity: 1;">真实姓名</label>
+                <span class="input-icon"> <i class="iconfont icon-jiaose"></i></span>
+              </div>
+              <!--<div class="input-info">
+                请使用企业邮箱进行注册
+              </div>-->
+            </div>
+            <div class="pass-item">
+              <div class="input-wrap">
+                <input id="group"  class="input-text" value=""  type="text">
+                <label class="input-label"  for="group"  style="opacity: 1;">组织机构</label>
+                <span class="input-icon"> <i class="iconfont icon-zuzhijiegou"></i></span>
+              </div>
+              <div class="input-info">
+                请认真填写所属组织机，格式：A省移动--B市公司--C部--D处
+              </div>
+            </div>
+            <div class="pass-item">
+              <div class="input-wrap">
+                <input id="email"  class="input-text" value=""  type="text">
+                <label class="input-label"  for="email"  style="opacity: 1;">邮箱地址</label>
+                <span class="input-icon"> <i class="iconfont icon-youxiang1"></i></span>
+              </div>
+              <div class="input-info">
+                请填写企业邮箱
+              </div>
+            </div>
+
+            <div class="pass-item">
+              <div class="input-wrap">
+                <input id="passWord" name="passWord" class="input-text" value="" type="text" style="padding-right: 150px;">
+                <label class="input-label" for="passWord" style="opacity: 1; display: block;">请输入验证码</label>
+                <span class="input-icon"> <i class="iconfont icon-icon-test"></i></span>
+                <span class="input-button">
+                  <img src="static/img/login/yzm.jpg">
+                </span>
+              </div>
+            </div>
+            <!--<div class="sp-line">
+              <span class="line"></span>
+              <span class="title">联系手机</span>
+            </div>-->
+            <div class="pass-item">
+              <div class="input-wrap">
+                <input id="mobel"  class="input-text" value=""  type="text">
+                <label class="input-label"  for="mobel"  style="opacity: 1;">手机号码</label>
+                <span class="input-icon"> <i class="iconfont icon-shoujihao"></i></span>
+              </div>
+              <!--<div class="input-info">
+                请使用企业邮箱进行注册
+              </div>-->
+            </div>
+            <div class="pass-item">
+              <div class="input-wrap">
+                <input  class="input-text" id="yzm"  value="" type="text" style="padding-right: 150px;">
+                <label class="input-label" for="yzm" style="opacity: 1; display: block;">请输入校验码</label>
+                <span class="input-icon"> <i class="iconfont icon-yanzhengma"></i></span>
+                <span class="input-button">
+                    <button>获取手机验证码</button>
+                </span>
+              </div>
+              <div class="input-info">
+                如果五分钟之内没有收到验证码，请重新发送，或者检查手机号是否正确
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="register-submit">
+            <button type="button"  id="btn_part1" class="button" onclick="">同意条款并注册</button>
+          </div>
+          <div class="register-checkbox">
+            <input id="J-agree"  checked="checked" class="ui-checkbox"  type="checkbox">
+            <label for="J-agree" class="checkbox-label">同意<a  href="#">《4A账号注册服务协议》</a></label>
+            <span>已有账号？<a href="#">立即登陆>></a></span>
+          </div>
+        </div>
+      </div>
+      <div class="register-footer">
+        版权所有：北京神州泰岳有限公司
+      </div>
+
+  </div>
+  <script src="static/assets/jQuery/jquery-1.12.4.min.js"></script>
+  <script src="static/scripts/login/infieldLabel.js"></script>
+  <script src="static/scripts/login/register.js"></script>
+  <script>
+    $(function(){
+      $(".nav-item-warp .nav-item").on('mouseover',function(){
+        $(this).children(".dropdown-menu-topbar").show()
+      })
+      $(".nav-item-warp .nav-item").on('mouseout',function(){
+        $(this).children(".dropdown-menu-topbar").hide()
+      })
+    });
+
+  </script>
+</body>
+</html>

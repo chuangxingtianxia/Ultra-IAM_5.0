@@ -1,0 +1,4 @@
+input.error {border: 1px solid #f7aaa0;  box-shadow: 0px 0px 4px 0px rgba(236, 100, 82, 0.4);}
+span.error {background:url("../images/unchecked.png") no-repeat 0px 0px; padding-left: 16px;padding-bottom: 2px;color: #ec6452;}
+span.success {background:url("../images/checked.png") no-repeat 0px 0px;padding-left: 16px; padding-bottom: 2px; color: #60ad00;}
+label.checked {background:url("../images/checked.png") no-repeat 0px 0px;}

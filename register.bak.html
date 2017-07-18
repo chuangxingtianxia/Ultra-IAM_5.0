@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>注册</title>
+  <!-- Bootstrap 3.3.6 -->
+  <link href="static/assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <!-- Font Awesome 字体图标 -->
+  <link href="static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+  <!-- 阿里巴巴 字体图标 -->
+  <!--<link href="static/assets/iconfont/css/iconfont.css" rel="stylesheet" type="text/css">-->
+  <link href="//at.alicdn.com/t/font_idnvgvgjxvwjyvi.css" rel="stylesheet" type="text/css">
+  <!-- CSS初始化 -->
+  <link href="static/css/base.css" rel="stylesheet" type="text/css">
+  <link href="static/css/reg.bak.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+  <div class="register-wrapper">
+      <div class="register-header">
+        <div class="header-content">
+            <a href="" class="logo">
+              <i class="iconfont icon-mobsecyidonganquan"></i><b>Ultra-IAM</b>V5.0
+            </a>
+			<span class="page-title">
+				注册帐号
+			</span>
+            <span class="switch-login">
+				<a href="#" title="登录" target="_blank">登录</a>
+			</span>
+        </div>
+      </div>
+      <div class="register-body">
+        <div class="reg-title"> 欢迎使用账号注册服务 </div>
+        <div class="reg-box-pan">
+          <div class="step">
+            <ul>
+              <li class="col-xs-4 on">
+                <span class="num"><em class="f-r5"></em><i>1</i></span>
+                <span class="line_bg lbg-r"></span>
+                <p class="lbg-txt">验证邮箱</p>
+              </li>
+              <li class="col-xs-4">
+                <span class="num"><em class="f-r5"></em><i>2</i></span>
+                <span class="line_bg lbg-l"></span>
+                <span class="line_bg lbg-r"></span>
+                <p class="lbg-txt">完善个人信息</p>
+              </li>
+              <li class="col-xs-4">
+                <span class="num"><em class="f-r5"></em><i>3</i></span>
+                <span class="line_bg lbg-l"></span>
+                <p class="lbg-txt">注册成功</p>
+              </li>
+            </ul>
+          </div>
+          <div class="reg-box"  style="margin-top:20px;">
+            <div class="part1">
+              <div class="register-form">
+                <div class="register-content">
+                  <div class="pass-item">
+                    <div class="input-wrap">
+                      <input id="email"  class="input-text" value=""  type="text">
+                      <label class="input-label"  for="email"  style="opacity: 1;">邮箱地址</label>
+                      <span class="input-icon"> <i class="iconfont icon-youxiang1"></i></span>
+                    </div>
+                    <div class="input-info">
+                      请使用企业邮箱进行注册
+                    </div>
+                  </div>
+                  <div class="pass-item">
+                    <div class="input-wrap">
+                      <input id="passWord" name="passWord" class="input-text" value="" type="text">
+                      <label class="input-label" for="passWord" style="opacity: 1; display: block;">请输入验证码</label>
+                      <span class="input-icon"> <i class="iconfont icon-icon-test"></i></span>
+                      <span class="yzm">
+                        <img src="static/img/login/yzm.jpg">
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="register-submit">
+                  <button type="button"  id="btn_part1" class="button" onclick="" style="width: 100%">下一步</button>
+                </div>
+              </div>
+            </div>
+            <div class="part2" style="display:none">
+
+              <div class="register-form">
+                <div class="register-info">
+                  已向邮箱:<b>test@163.com</b>发送了确认邮件，请登录邮箱获取校证码
+                </div>
+                <div class="register-content">
+                  <div class="pass-item">
+                    <div class="input-wrap">
+                      <input  class="input-text" id="yzm"  value="" type="text">
+                      <label class="input-label" for="yzm" style="opacity: 1; display: block;">请输入校验码</label>
+                      <span class="input-icon"> <i class="iconfont icon-yanzhengma"></i></span>
+                      <span class="input-button">
+                          <button>300秒后重新发送</button>
+                      </span>
+                    </div>
+                    <div class="input-info">
+                      如果10分钟之内没有收到验证码，请重新发送，或者返回修改邮箱
+                    </div>
+                  </div>
+                </div>
+                <div class="register-submit">
+                  <button type="button"  id="btn_part2" class="button pull-left">验证</button>
+                  <button type="button"  id="btn_back" class="button pull-right">返回</button>
+                </div>
+
+              </div>
+            </div>
+            <div class="part3" style="display:none">
+              <div class="register-form">
+                <div class="register-content">
+                  <!--<div class="pass-item">
+                    <div class="left-title">
+                      邮箱地址：
+                    </div>
+                    <div class="right-body">
+                      gaochung@ultrapower.com.cn
+                    </div>
+                  </div>
+                  <div class="pass-item">
+                    <div class="left-title">
+                      账号名称：
+                    </div>
+                    <div class="right-body">
+                      gaochung
+                    </div>
+                  </div>-->
+                  <div class="pass-item">
+                    <div class="input-wrap">
+                      <input  class="input-text"  value="test@163.com" disabled  type="text">
+                      <span class="input-icon"> <i class="iconfont icon-youxiang1"></i></span>
+                    </div>
+                  </div>
+
+                  <div class="pass-item">
+                    <div class="input-wrap">
+                      <input  class="input-text"  value="test@163.com" disabled  type="text">
+                      <span class="input-icon"> <i class="iconfont icon-zhanghao"></i></span>
+                    </div>
+                    <div class="input-info">
+                      账号ID由系统自动生成，是您以后登录系统的重要凭证，请牢记！
+                    </div>
+                  </div>
+                  <div class="pass-item">
+                    <div class="input-wrap">
+                      <input  class="input-text" id="people" value=""  type="text">
+                      <label class="input-label" for="people"  style="opacity: 1;">审批人</label>
+                      <span class="input-icon"> <i class="iconfont icon-shenpi"></i></span>
+                    </div>
+                    <div class="input-info">
+                      请填写您的直属领导
+                    </div>
+
+                  </div>
+
+                  <div class="pass-item">
+                    <div class="input-wrap">
+                      <input  class="input-text" id="userName" value=""  type="text">
+                      <label class="input-label" for="userName"   style="opacity: 1;">真实姓名</label>
+                      <span class="input-icon"> <i class="iconfont icon-jiaose"></i></span>
+                    </div>
+                    <div class="input-info">
+                      请填写您的真实姓名
+                    </div>
+                  </div>
+                  <div class="pass-item">
+                    <div class="input-wrap">
+                      <input  class="input-text" id="mobel" value=""  type="text">
+                      <label class="input-label" for="mobel" style="opacity: 1;">手机号</label>
+                      <span class="input-icon"> <i class="iconfont icon-shoujihao"></i></span>
+                    </div>
+                    <div class="input-info">
+                      请填写11位有效的手机号码
+                    </div>
+                  </div>
+                  <div class="pass-item">
+                    <div class="input-wrap">
+                      <input  class="input-text" id="zuzhi" value=""  type="text">
+                      <label class="input-label" for="zuzhi"  style="opacity: 1;">组织机构</label>
+                      <span class="input-icon"> <i class="iconfont icon-zuzhijiegou"></i></span>
+                    </div>
+                    <div class="input-info">
+                      请点击选择组织结构
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="register-submit">
+                  <button type="button"  id="btn_part3" class="button" onclick="" style="width: 100%">提交</button>
+                </div>
+              </div>
+            </div>
+            <div class="part4 text-center" style="display:none">
+              <div class="success">
+                <img src="static/img/login/passwd_ok.png">
+                <h3>恭喜您，您已注册成功，如审核通过，密码会发送到您绑定的邮箱邮箱，请注意查收！</h3>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="register-footer">
+        版权所有：北京神州泰岳有限公司
+      </div>
+
+  </div>
+  <script src="static/assets/jQuery/jquery-1.12.4.min.js"></script>
+  <script src="static/scripts/login/infieldLabel.js"></script>
+  <script src="static/scripts/login/register.js"></script>
+  <script>
+    $(function(){
+      //第一页的确定按钮
+      $("#btn_part1").click(function(){
+        $(".part1").hide();
+        $(".part2").show();
+
+      });
+      //第二页的确定按钮
+      $("#btn_part2").click(function(){
+        $(".part2").hide();
+        $(".part3").show();
+        $(".step li").eq(1).addClass("on");
+      });
+      $("#btn_back").click(function(){
+        $(".part2").hide();
+        $(".part1").show();
+      });
+      //第三页的确定按钮
+      $("#btn_part3").click(function(){
+        $(".part3").hide();
+        $(".part4").show();
+        $(".step li").eq(2).addClass("on");
+
+      });
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- 告诉浏览器响应屏幕宽度 -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+	<title>系统公告</title>
+	<!-- Bootstrap 3.3.6 -->
+	<link href="../../static/assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<!-- Font Awesome 字体图标 -->
+	<link href="../../static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+	<!-- 表格插件 -->
+	<link href="../../static/assets/datatables/css/jquery.dataTables.css" rel="stylesheet", type="text/css">
+	<!-- CSS初始化 -->
+	<link href="../../static/css/base.css" rel="stylesheet" type="text/css">
+	<!-- 公用样式 -->
+	<link href="../../static/css/main.css" rel="stylesheet" type="text/css">
+	<!--  让IE8支持HTML5元素和媒体查询  -->
+	<!-- 警告：如果通过本地file：//打开页面 ，Respond.js将无法正常工作 -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+<div class="content-warp">
+	<div class="content-header">
+		<div class="breadcrumbs">
+			<span>首页</span>
+			<span class="divider">/</span>
+			<a href="#/bcc/instance/list">资源管理</a>
+			<span class="divider">/</span>
+			<a href="#/bcc/instance/list">系统资源</a>
+			<span class="divider">/</span>
+			<span class="active">系统资源详细信息</span>
+		</div>
+	</div>
+	<div class="page-tabs-warp">
+		<ul class="page-tabs">
+			<li class="selected"><a href="" >系统公告</a></li>
+		</ul>
+	</div>
+	<div class="content">
+		<!--操作菜单-->
+		<div class="operation-wrap">
+			<div class="buttons-left-wrap">
+				<button class="btn btn-primary" type="button" id="addBtn">
+					<i class="fa fa-plus" style=""></i>
+					添加
+				</button>
+				<button class="btn btn-default" type="button"  id="delBtn">删除</button>
+
+
+			</div>
+			<div class="buttons-right-wrap">
+				<div class="search-group">
+					<input class="form-control"  id="searchKeys" placeholder="请输入名称进行搜索" style="width: 200px;">
+					<button type="button"  class="btn btn-default" id="searchBtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+				</div>
+
+				<div class="column-custom-warp" >
+					<button type="button" data-dropdown="#column-chceck" class="btn btn-default">
+						<i class="fa fa-gear" aria-hidden="true"></i>
+					</button>
+					<div class="dropdown dropdown-tip dropdown-anchor-right  dropdown-relative column-custom-box " id ="column-chceck" style="display: none;">
+						<div class="title"><h1>自定义列</h1></div>
+						<div class="box">
+							<ul class="columnList">
+
+							</ul>
+						</div>
+						<div class="footer">
+							<button type="button"  class="btn btn-default" id="column-close-btn">关闭</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="notice-wrap">
+			<!--表格容器-->
+			<div class="notice-list">
+				<div class="grid-wrap">
+					<table id="datagrid" class="table" cellspacing="0" width="100%"></table>
+				</div>
+			</div>
+			<div class="notice-content">
+				<div class="notice-main">
+					<div class="notice-title" id="notice-title">
+						2017年4月18日泰岳语义云V1.0正式发布
+					</div>
+					<div class="notice-time" id="notice-time">
+						2017年04月18日 11:20
+					</div>
+					<div class="nitice-detail" id="nitice-detail">
+						<p>在人工智能研究院语义云团队的刻苦攻坚和不懈努力下，基于其智慧语义认知技术的中文语义分析服务云平台泰岳语义云V1.0，将于2017年4月18日正式发布！企业客户、合作伙伴和个人开发者将有机会直接体验到泰岳独特的智慧语义认知技术。</p>
+						<p>【平台特色】</p>
+						<p>&nbsp;&nbsp;1）聚焦应用场景的语义分析应用开发框架设计，实现对应场景应用的快速创建，提供语义分析定制化难的能力。</p>
+						<p>&nbsp;&nbsp;2）可视化的分析挖掘算法设计，具象化分析算法，直观地体现在平台上，便于用户理解和使用。</p>
+						<p>&nbsp;&nbsp;3）区别化的概念/要素资源模型设计，分界明显，为资源的累积和复用奠定基础。</p>
+						<p>【核心功能】</p>
+						<p>&nbsp;&nbsp;1）语义应用开发框架。语义应用开发框架是为开发者提供的一套开发流程，在语义开发框架下，开发者可以利用平台各种资源，很方便的创建场景应用； </p>
+						<p>&nbsp;&nbsp;2）模型schema。成熟的、基于场景的业务模型，采用封装的模式，以应用的形式展现。实现资源复用，降低人员需求，提高开发者用户的开发效率和开发质量； </p>
+
+					</div>
+				</div>
+				<div class="notice-footer">
+					<div class="line"></div>
+					<button id="notice-close-btn" class="btn btn-default" type="button">关闭</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- jQuery -->
+<script src="../../static/assets/jQuery/jquery-1.12.4.min.js"></script>
+<!--bootstrap框架-->
+<script src="../../static/assets/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<!--layer-->
+<script src="../../static/assets/layer/layer.js" type="text/javascript"></script>
+<!--表格插件-->
+<script src="../../static/assets/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<!--下拉插件，实现下拉菜单功能-->
+<script type="text/javascript" src="../../static/assets/dropdown/jquery.dropdown.js" ></script>
+<!--公用js-->
+<script type="text/javascript" src="../../static/scripts/common/common.js"></script>
+<script type="text/javascript" src="../../static/scripts/common/datatableCommon.js"></script>
+<script type="text/javascript" src="../../static/scripts/common/layerCommon.js"></script>
+<!--独立js-->
+<script type="text/javascript" src="js/manager.js"></script>
+<script type="text/javascript" src="js/list.js"></script>
+
+</body>
+</html>

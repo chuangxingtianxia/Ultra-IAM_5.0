@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- 告诉浏览器响应屏幕宽度 -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+	<title>主账号目录</title>
+	<!-- Bootstrap 3.3.6 -->
+	<link href="../../static/assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<!-- Font Awesome 字体图标 -->
+	<link href="../../static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+	<!-- 表格插件 -->
+	<link href="../../static/assets/datatables/css/jquery.dataTables.css" rel="stylesheet", type="text/css">
+	<!--下拉插件，实现下拉菜单功能-->
+	<link rel="stylesheet" type="text/css" href="../../static/assets/dropdown/css/jquery.dropdown.css">
+	<!--表单美化样式插件-->
+	<link href="../../static/assets/icheck/skins/all.css" rel="stylesheet"  type="text/css">
+	<link href="../../static/assets/select2/css/select2.css" rel="stylesheet" type="text/css">
+	<!--树插件-->
+	<link href="../../static/assets/dhtmlxtree/dhtmlxtree.css" rel="stylesheet" type="text/css">
+	<!-- CSS初始化 -->
+	<link href="../../static/css/base.css" rel="stylesheet" type="text/css">
+	<!-- 公用样式 -->
+	<link href="../../static/css/main.css" rel="stylesheet" type="text/css">
+	<!--  让IE8支持HTML5元素和媒体查询  -->
+	<!-- 警告：如果通过本地file：//打开页面 ，Respond.js将无法正常工作 -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+<div class="content-warp">
+	<div class="content-header">
+		<div class="breadcrumbs">
+			<a href="#">首页</a>
+			<span class="divider">/</span>
+			<a href="">账号管理 </a>
+			<span class="divider">/</span>
+			<span class="active">主账号管理 </span>
+		</div>
+	</div>
+
+	<div class="page-tabs-warp">
+		<ul class="page-tabs">
+			<li class="selected"><a>主账号列表</a></li>
+			<li><a>主账号组列表</a></li>
+		</ul>
+	</div>
+	<div class="content">
+
+		<!--操作菜单-->
+		<div class="operation-wrap">
+			<div class="buttons-left-wrap">
+				<button class="btn btn-primary" type="button" id="addBtn">
+					<i class="fa fa-plus" style=""></i>
+					添加
+				</button>
+				<button class="btn btn-default" type="button" id="delBtn" disabled="disabled">删除</button>
+				<button class="btn btn-default" type="button">激活</button>
+				<button class="btn btn-default" disabled="disabled" type="button">迁移</button>
+				<button class="btn btn-default" type="button"  disabled="disabled">延期</button>
+				<button class="btn btn-default" type="button">恢复</button>
+				<button class="btn btn-default" disabled="disabled" type="button">复制</button>
+				<div class="btn-group">
+					<button class="btn btn-default" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						更多操作 <i class="fa fa-chevron-down" aria-hidden="true"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-btn">
+						<li>
+							<a href="#">
+								<i class="fa fa-unlock" style=""></i>
+								<span>锁定</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-unlock" style=""></i>
+								<span>解锁</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-chevron-down" aria-hidden="true"></i>
+								<span>导入</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<i class="fa fa-chevron-down" aria-hidden="true"></i>
+								<span>导出</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-download" aria-hidden="true"></i>
+								<span>模板下载</span>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+			<div class="buttons-right-wrap">
+
+				<div class="search-group">
+					<input class="form-control"  id="searchshowKeys" name="keyword" placeholder="输入姓名、账号ID、号码、创建人... 按下回车进行搜索" style="width: 300px;">
+					<button type="button" id="filterBtn"  class="btn btn-primary" style="margin: 0;"><i class="fa fa-filter" aria-hidden="true" style="margin-right: 5px;"></i>筛选</button>
+				</div>
+
+
+
+
+			</div>
+		</div>
+
+
+
+
+		<!--表格容器-->
+		<div class="grid-wrap">
+			<div class="grid-header">
+				<div class="filter-info">
+					<ul class="filter-item-wrap">
+						<li id="top-item">找到 <em>1</em>个</li>
+						<!--<li class="filter-item" data-prop="keyword">1111</li>-->
+						<!--<li class="filter-item">部门：B组</li>
+						<li class="filter-item">状态：劳务派遣、正式</li>-->
+						<li id="last-item">主账号</li>
+					</ul>
+
+				</div>
+
+				<div class="column-custom-warp" >
+					<button type="button" data-dropdown="#column-chceck" class="btn btn-default">
+						<i class="fa fa-gear" aria-hidden="true"></i>
+					</button>
+					<div class="dropdown dropdown-tip dropdown-anchor-right  dropdown-relative column-custom-box " id ="column-chceck" style="display: none;">
+						<div class="title"><h1>自定义列</h1></div>
+						<div class="box">
+							<ul class="columnList">
+
+							</ul>
+						</div>
+						<div class="footer">
+							<button type="button"  class="btn btn-default" id="column-close-btn">关闭</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="grid-content">
+				<table id="datagrid" class="boder-table" cellspacing="0" width="100%"></table>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+<!--高级搜索-->
+<div class="filter-mask" style="display: block;">
+	<span class="close-btn"><i class="fa fa-close"></i></span>
+	<div class="filter-wrapper"  style="display: block;">
+		<div class="filter-container">
+			<!--<div class="module">
+				<h3 class="title">主账号ID</h3>
+				<div class="body">
+					<div class="input-box">
+						<input class="form-control" name="userId" type="text" placeholder="主账号ID">
+					</div>
+				</div>
+			</div>
+
+			<div class="module">
+				<h3 class="title">用户姓名</h3>
+				<div class="body">
+					<div class="input-box">
+						<input class="form-control" name="userName" type="text" placeholder="用户姓名">
+					</div>
+				</div>
+			</div>
+
+			<div class="module">
+				<h3 class="title">手机号码</h3>
+				<div class="body">
+					<div class="input-box">
+						<input class="form-control" name="mobile" type="text" placeholder="手机号码">
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="module">
+				<h3 class="title">创建人</h3>
+				<div class="body">
+					<div class="input-box">
+						<input class="form-control" name="createUser" type="text" placeholder="创建人">
+					</div>
+				</div>
+			</div>-->
+
+			<div class="module">
+				<h3 class="title">用户类型</h3>
+				<div class="body">
+					<!--<div class="select-box">
+						<select class="select" id="userType" placeholder="用户类型">
+							<option name="userType">不限</option>
+							<option name="userType">内部用户</option>
+							<option name="userType">外部用户</option>
+						</select>
+					</div>-->
+					<div class="checkbox-group">
+						<div class="checkbox">
+							<label>
+								<input type="radio" name="usertype" value="typea">
+								<span>不限</span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="radio" name="usertype" value="typeb">
+								<span>内部用户</span>
+							</label>
+						</div>
+
+						<div class="checkbox">
+							<label>
+								<input type="radio" name="usertype" value="typec" >
+								<span>外部用户</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="module">
+				<h3 class="title">列表选择</h3>
+				<div class="body">
+					<div class="select-box">
+						<select class="select" name="usergroup" id="userGroup">
+							<option  value="userGroup1">不限</option>
+							<option  value="userGroup2" >正常</option>
+							<option  value="userGroup3">未激活</option>
+							<option  value="userGroup4">锁定</option>
+							<option  value="userGroup5">已注销</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="module">
+				<h3 class="title">组织机构</h3>
+				<div class="body">
+					<div class="tree-box">
+						<div class="check-tree-wrap">
+							<div class="tree-title">
+								<!--<input type="text" class="form-control" id="treeSeleted">-->
+								<span></span>
+								<b class="arrow">
+									<i></i>
+								</b>
+							</div>
+							<div class="tree-body">
+								<div id="selectTree">
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="module">
+				<h3 class="title">用户状态</h3>
+				<div class="body">
+					<div class="checkbox-group">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="status" data-label="不限"  value="status1">
+								<span>不限</span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="status" data-label="正常" value="status2">
+								<span>正常</span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="status" data-label="未激活" value="status3">
+								<span>未激活</span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="status" data-label="锁定"  value="status4">
+								<span>锁定</span>
+							</label>
+						</div>
+
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="status"  data-label="已注销"  value="status5">
+								<span>已注销</span>
+							</label>
+						</div>
+					</div>
+					<!--<div class="select-box">
+						<select class="select" id="status" placeholder="用户状态">
+							<option name="status" >不限</option>
+							<option name="status" >正常</option>
+							<option name="status" >未激活</option>
+							<option name="status" >锁定</option>
+							<option name="status" >已注销</option>
+						</select>
+					</div>-->
+				</div>
+			</div>
+
+			<div class="module">
+				<h3 class="title">查询子组</h3>
+				<div class="body">
+					<div class="checkbox-group">
+						<div class="checkbox">
+							<label>
+								<input type="radio" name="group" value="">
+								<span>是</span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="radio" name="group"  value="">
+								<span>否</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+
+<!-- jQuery -->
+<script src="../../static/assets/jQuery/jquery-1.12.4.min.js"></script>
+<!--bootstrap框架-->
+<script src="../../static/assets/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<!--layer-->
+<script src="../../static/assets/layer/layer.js" type="text/javascript"></script>
+<!--表格插件-->
+<script src="../../static/assets/datatables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<!--下拉插件，实现下拉菜单功能-->
+<script type="text/javascript" src="../../static/assets/dropdown/jquery.dropdown.js" ></script>
+<!--树插件-->
+<script src="../../static/assets/dhtmlxtree/dhtmlxtree.js" type="text/javascript"></script>
+<!--表单美化插件-->
+<script src="../../static/assets/icheck/icheck.js" type="text/javascript"></script>
+<script src="../../static/assets/select2/js/select2.full.js" type="text/javascript"></script>
+<!--公用js-->
+<script type="text/javascript" src="../../static/scripts/common/common.js"></script>
+<script type="text/javascript" src="../../static/scripts/common/datatableCommon.js"></script>
+<script type="text/javascript" src="../../static/scripts/common/layerCommon.js"></script>
+<!--独立js-->
+<script type="text/javascript" src="js/manager.js"></script>
+<script type="text/javascript" src="js/list.js"></script>
+
+</body>
+</html>

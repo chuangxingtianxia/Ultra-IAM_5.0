@@ -1,0 +1,29 @@
+body{font:12px/1.5 "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", STHeiti, sans-serif; color: #666; -webkit-font-smoothing: antialiased;}
+input,textarea,select{font-size:12px}
+body,p,h1,h2,h3,h4,h5,h6,form,ul,ol,dl,dd,dt{margin:0}
+ul,ol,dl,dd,dt{list-style:none;padding-left:0}
+img{border:none}
+img,input,.vm{vertical-align:middle}
+a{text-decoration:none;cursor: pointer;}
+table{border-collapse:collapse;}
+body{background: #e2e5ec ; }
+/*html,body{height:100%;}*//*如果有IFAME的话,需要此样式为ifarma自适应高度*/
+.h14{height:14px}.h16{height:16px}.h18{height:18px}.h20{height:20px}.h22{height:22px}.h24{height:24px}.h30{height:30px;}.h32{height:32px}
+.lh14{line-height:14px}.lh16{line-height:16px}.lh18{line-height:18px}.lh20{line-height:20px}.lh22{line-height:22px}.lh24{line-height:24px}.lh30{line-height:30px}.lh32{line-height:32px}
+.tc{text-align:center}.tl{text-align:left}.tr{text-align:right}.vtb{vertical-align:text-bottom}.vt{vertical-align:top}.vn{vertical-align:-2px}
+.m0{margin:0}.mt-1{margin-top:-1px}.ml-1{margin-left:-1px}.vimg{margin-bottom:-3px}
+.c0{color:#000}.c3{color:#333}.c6{color:#666}.c9{color:#999}.cf{color:#fff}
+.n{font-weight:normal;font-style:normal}.b{font-weight:bold}.i{font-style:italic}
+.f0{font-size:0}.f12{font-size:12px}.f13{font-size:13px}.f14{font-size:14px}.f16{font-size:16px}.f20{font-size:20px}.f24{font-size:24px}
+.udl{text-decoration:underline}.udn,.udn:hover,.udn a:hover,a.udl:hover{text-decoration:none}
+.dn{display:none}.db{display:block}.dib{display:inline-block}.l{float:left}.r{float:right}.cl{clear:both}.offscreen{position:absolute;left:-9999px}
+.p_r{position:relative}.p_a{position:absolute}.ovh{overflow:hidden}.ovs{overflow:scroll}.z{*zoom:1}.auto{margin-left:0;margin-right:0}
+.z1{z-index:1}.z2{z-index:-2}.nowrap{white-space:nowrap}.bk{word-wrap:break-word}
+.fix{*zoom:1}.fix:after{content:".";display:block;clear:both;height:0;overflow:hidden;visibility:hidden}.fixe{overflow:hidden;_zoom:1}
+.mb{margin-bottom: 15px;} .ml{margin-left: 15px;}.mr{margin-right: 15px;}.mt{margin-top: 15px;}
+.pb{padding-bottom: 10px;} .pl{padding-left: 10px;}.pr{padding-right: 10px;}.pt{padding-top: 10px;}
+
+
+
+
+

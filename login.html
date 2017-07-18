@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>登录</title>
+  <!-- 阿里巴巴 字体图标 -->
+  <link href="//at.alicdn.com/t/font_h7kt9ya60f0cc8fr.css" rel="stylesheet" type="text/css">
+  <link href="static/css/login.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <video id="background_video" loop muted >
+<!--
+      您的浏览器不支持 video 标签。请使用更先进的浏览器,如<a href="http://www.google.cn/chrome/browser/" target="_blank">Chrome浏览器</a>或<a href="http://www.firefox.com.cn/download/" target="_blank">Firefox浏览器</a>
+-->
+    </video>
+    <div id="video_cover"></div>
+    <div id="overlay"></div>
+
+    <div id="video_controls">
+      <span id="play">
+        <img src="static/img/login/play.png">
+      </span>
+      <span id="pause">
+        <img src="static/img/login/pause.png">
+      </span>
+    </div>
+
+    <div class="main_content">
+      <div id="head">
+        <h1>Ultra-IAM<span>统一身份及访问安全管理平台</span></h1>
+      </div>
+      <div class="login-form">
+        <div class="login-content">
+          <div class="pass-item">
+            <input id="userName" class="input-text" name="userName" value=""  type="text">
+            <label id="foraccount" for="userName" style="opacity: 1;">主帐号</label>
+            <span class="input-icon"> <i class="iconfont icon-yonghuming"></i></span>
+          </div>
+          <div class="pass-item">
+            <input id="passWord" name="passWord" class="input-text" value="" type="password">
+            <label id="forpassword" for="passWord" style="opacity: 1; display: block;">密码</label>
+            <span class="input-icon"> <i class="iconfont icon-mima"></i></span>
+          </div>
+
+        </div>
+        <div class="login-submit">
+          <button type="button"  id="loginButton" class="button button--wayra" onclick="findUserById()">立即登录</button>
+          <button type="button"  class="button other button--wayra " >其他认证</button>
+        </div>
+      <!--  <div class="login-other">
+          <a href="#">忘记密码？</a>
+        </div>-->
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>
+      Copyright &copy; 2017-2020 UltraSafe.All Rights Reserved.
+    </p>
+    <p>
+      版权所有：<a href=";://www.ultrapower.com.cn/" target="_blank">神州泰岳软件股份有限公司</a>
+    </p>
+
+  </div>
+  <script src="static/assets/jQuery/jquery-1.12.4.min.js"></script>
+  <script src="static/scripts/login/bideo.js"></script>
+  <script src="static/scripts/login/infieldLabel.js"></script>
+  <script src="static/scripts/login/main.js"></script>
+  <script type="text/javascript">
+
+    function findUserById(){
+      window.location="index.html"
+    }
+  </script>
+
+</body>
+</html>

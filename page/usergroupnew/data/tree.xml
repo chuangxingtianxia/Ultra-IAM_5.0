@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree id="0">
+    <item text="组织结构" id="1" open="1">
+        <item text="组织结构A" id="1_1"/>
+        <item text="组织结构B" id="1_2"/>
+        <item text="组织结构C" id="1_3"/>
+    </item>
+    <!--<item text="主账号组" id="2" open="1">
+        <item text="主账号组A" id="2_1"/>
+        <item text="主账号组B" id="2_2"/>
+        <item text="主账号组C" id="2_3"/>
+    </item>
+    <item text="用户角色" id="3" open="1">
+        <item text="用户角色A" id="3_1"/>
+        <item text="用户角色B" id="3_2"/>
+        <item text="用户角色C" id="3_3"/>
+    </item>
+    <item text="用户类型" id="4" open="4">
+        <item text="用户类型A" id="4_1"/>
+        <item text="用户类型B" id="4_2"/>
+        <item text="用户类型C" id="4_3"/>
+    </item>-->
+
+</tree>

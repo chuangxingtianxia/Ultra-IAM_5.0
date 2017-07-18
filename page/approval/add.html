@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- 告诉浏览器响应屏幕宽度 -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+	<title>添加账号</title>
+	<!-- Bootstrap 3.3.6 -->
+	<link href="../../static/assets/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<!-- 表单验证 -->
+	<link href="../../static/assets/bootstrapvalidator/css/bootstrapValidator.css" rel="stylesheet" type="text/css">
+	<!-- Font Awesome 字体图标 -->
+	<link href="../../static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+	<!--表单下拉框select样式插件-->
+	<link href="../../static/assets/select2/css/select2.css" rel="stylesheet" type="text/css">
+	<!--表单元素样式插件-->
+	<link href="../../static/assets/icheck/skins/default/blue.css" rel="stylesheet"  type="text/css">
+	<link href="../../static/assets/icheck/ext/skins/default/niceCheck.css" rel="stylesheet"  type="text/css">
+	<!--树插件-->
+	<link href="../../static/assets/dhtmlxtree/dhtmlxtree.css" rel="stylesheet" type="text/css">
+	<!--日期插件-->
+	<link href="../../static/assets/pikaday/css/pikaday.css" rel="stylesheet" type="text/css">
+	<!-- CSS初始化 -->
+	<link href="../../static/css/base.css" rel="stylesheet" type="text/css">
+	<!-- 公用样式 -->
+	<link href="../../static/css/main.css" rel="stylesheet" type="text/css">
+	<!--  让IE8支持HTML5元素和媒体查询  -->
+	<!-- 警告：如果通过本地file：//打开页面 ，Respond.js将无法正常工作 -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+
+</head>
+<body>
+<div class="content-warp">
+	<div class="content-header">
+		<div class="breadcrumbs">
+			<span>首页</span>
+			<span class="divider">/</span>
+			<a href="#/bcc/instance/list">审批列表</a>
+			<span class="divider">/</span>
+			<span class="active">添加主账号</span>
+		</div>
+	</div>
+	<div class="page-tabs-warp">
+		<ul class="page-tabs">
+			<li class="selected"><a href="" >添加账号</a></li>
+		</ul>
+		<div  class="step">
+			<ul>
+				<li class="step-item active"><b>1</b><span>用户信息</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+				<li class="step-item"><b>2</b><span>认证信息</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+				<li class="step-item"><b>3</b><span>同步信息</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content" style="padding: 20px;">
+		<!--<div class="step-wrap">
+			<div class="back-wrapper">
+				<a href="">
+					<i class="fa fa-chevron-left" aria-hidden="true"></i>
+					返回实例列表
+				</a>
+			</div>
+
+			<div  class="step">
+				<ul>
+					<li class="step-item active"><b>1</b><span>选择云服务器</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+					<li class="step-item"><b>2</b><span>确认订单</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+					<li class="step-item"><b>3</b><span>在线支付</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+					<li class="step-item"><b>4</b><span>支付成功</span></li>
+				</ul>
+			</div>
+
+
+		</div>-->
+		<form id="defaultForm" method="post" action="">
+
+			<div class="form-step-wrap">
+				<div class="part1">
+					<div  class="form-section">
+						<div class="form-section-title-wrap">
+							<h2 class="form-section-title"> <span>必填信息</span></h2>
+							<div class="form-section-btn open">
+								<i class="fa fa-chevron-up" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div class="form-section-content row">
+							<div class="form-item col-xs-6">
+								<div class="form-label"><!--<em>*</em>-->用户姓名&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-input">
+										<input class="form-control" name="clientName" id="clientName"  type="text">
+									</div>
+									<div class="form-note">不超过50个字符，只允许包含字母、汉字、数字和下划线</div>
+								</div>
+							</div>
+							<div class="form-item col-xs-6">
+								<div class="form-label"><!--<em>*</em>-->主帐号ID&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-input">
+										<input type="text" class="form-control" id="softFlag" name="softFlag">
+									</div>
+									<div class="form-note">不超过50个字符，只允许包含字母、汉字、数字和下划线</div>
+								</div>
+							</div>
+
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">手机号码&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-input">
+										<input class="form-control" name="clientName" id="clientName"  type="text">
+									</div>
+									<div class="form-note">请输入11位手机号 </div>
+								</div>
+							</div>
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">电子邮箱&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-input">
+										<input class="form-control" name="clientName" id="clientName"  type="text">
+									</div>
+									<div class="form-note">请输入邮箱地址</div>
+								</div>
+							</div>
+
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">生效日期&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-input">
+										<input id="valid_data" type="text" name="clientData" class="form-control">
+									</div>
+								</div>
+
+							</div>
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">添加标签&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-input">
+										<input id="valid_data" type="text" name="clientData" class="form-control">
+									</div>
+								</div>
+
+							</div>
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">是否激活&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-check">
+										<input name="isNeedPath" type="radio" id="isNeedPath" data-text="是" checked  />
+										<input name="isNeedPath" type="radio" id="isNeedPath1" data-text="否" />
+									</div>
+								</div>
+							</div>
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">用户性别&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-check">
+
+										<input name="isDefalt" type="radio" id="isDefalt" data-text="男" checked  />
+										<input name="isDefalt" type="radio" id="isDefalt1" data-text="女" />
+
+									</div>
+								</div>
+							</div>
+							<div class="form-item col-xs-12">
+								<div class="form-label"><!--<em>*</em>-->所属用户组&nbsp;&nbsp;:</div>
+								<div class="form-group">
+
+									<div class="asset-group-wrap" >
+										<div class="asset-group-tree" style="display: none">
+											<!--<div id="group_tree"></div>-->
+										</div>
+										<div class="asset-group-selected-list" style="margin:0;">
+											<ul id="asset_group_selected">
+												<li >
+													<div class="asset-group-item-wrap">
+														<span>资源组ABCDVGDDKJKFDFSDFD</span>
+														<a href="javascript: void(0);" class="remove-asset-group-action" id="defaultUser"><i class="fa fa-times"></i></a>
+													</div>
+												</li>
+												<li id="addUser">
+                                                    <div class="asset-group-item-wrap">
+													  <span>添加</span>
+                                                      <a href="javascript: void(0);"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                                                    </div>
+                                                  </li>
+											</ul>
+										</div>
+									</div>
+									<div class="form-note">请至少选择一个组</div>
+								</div>
+							</div>
+
+
+
+
+
+						</div>
+					</div>
+
+					<div  class="form-section">
+						<div class="form-section-title-wrap">
+							<h2 class="form-section-title"> <span>选填信息</span></h2>
+							<div class="form-section-btn">
+								<i class="fa fa-chevron-down" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div class="form-section-content row">
+							<div class="form-item col-xs-6">
+								<div class="form-label">座机号码&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-input">
+										<input class="form-control" name="clientName" id="clientName"  type="text">
+									</div>
+									<div class="form-note">请输入座机号码，格式为：区号-座机号（区号可选） </div>
+								</div>
+							</div>
+							<div class="form-item col-xs-6">
+								<div class="form-label">通讯地址&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-input">
+										<input class="form-control" name="clientName" id="clientName"  type="text">
+									</div>
+									<div class="form-note">不超过50个字符，只允许包含字母、汉字、数字和下划线</div>
+								</div>
+							</div>
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">岗位职级&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-select">
+										<select class="select" name="clientType">
+											<option value="" ></option>
+											<option value="" >1</option>
+											<option value="1">2</option>
+											<option value="" >3</option>
+											<option value="1">4</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">套入职级&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-select">
+										<select class="select" name="clientType">
+											<option value="" ></option>
+											<option value="1">2</option>
+											<option value="" >3</option>
+											<option value="1">4</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">员工类型&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-select">
+										<select class="select" name="clientType">
+											<option value="" ></option>
+											<option value="1">2</option>
+											<option value="" >3</option>
+											<option value="1">4</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form-item col-xs-6">
+								<div class="form-label">用户类型&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-select">
+										<select class="select" name="clientType">
+											<option value="" >内部用户</option>
+											<option value="1">外部用户</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">首选移动号码&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-input">
+										<input class="form-control" name="clientName" id="clientName"  type="text">
+									</div>
+									<div class="form-note">请输入11位手机号</div>
+								</div>
+							</div>
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">员工编号&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-input">
+										<input class="form-control" name="clientName" id="clientName"  type="text">
+									</div>
+									<div class="form-note">不超过50个字符，只允许包含字母、汉字、数字和下划线</div>
+								</div>
+							</div>
+
+
+
+
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">层级编码&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-select">
+										<select class="select" name="clientType">
+											<option value="" ></option>
+											<option value="1">2</option>
+											<option value="" >3</option>
+											<option value="1">4</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="form-item col-xs-6">
+								<div class="form-label">所属地市&nbsp;&nbsp;：</div>
+								<div class="form-group">
+									<div class="form-select">
+										<select class="select" name="clientType">
+											<option value="" ></option>
+											<option value="1">2</option>
+											<option value="" >3</option>
+											<option value="1">4</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-item col-xs-12">
+								<div class="form-label"><span>信息描述&nbsp;&nbsp;：</span></div>
+								<div class="form-group">
+									<div class="form-input">
+										<textarea class="form-control"  name="clientDescription" id="clientDescription"></textarea>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</form>
+	</div>
+</div>
+
+<div class="layer-footer-wrap">
+	<div class="footer-btn">
+		<button class="btn btn-primary" type="button" id="save_btn"><i class="fa fa-floppy-o" style=""></i><span>保存</span></button>
+		<button class="btn btn-default" type="button" id="resetBtn"><i class="fa fa-ban" style=""></i><span>保存并下一步</span></button>
+	</div>
+</div>
+
+<div class="check-tree-warp">
+	<div class="check-tree-title">
+		选择
+		<span id="closeUsertree">
+			<i class="fa fa-close" aria-hidden="true"></i>
+		</span>
+	</div>
+	<div id="group_tree"></div>
+</div>
+<!-- jQuery -->
+<script src="../../static/assets/jQuery/jquery-1.12.4.min.js"></script>
+<!--bootstrap框架-->
+<script src="../../static/assets/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+<!--layer-->
+<script src="../../static/assets/layer/layer.js" type="text/javascript"></script>
+<!--表单检验-->
+<script src="../../static/assets/bootstrapvalidator/js/bootstrapValidator.min.js" type="text/javascript"></script>
+<!--表单下拉框select样式插件-->
+<script src="../../static/assets/select2/js/select2.full.js" type="text/javascript"></script>
+<!--表单元素样式插件-->
+<script src="../../static/assets/icheck/icheck.js" type="text/javascript"></script>
+<script src="../../static/assets/icheck/ext/niceCheck.js" type="text/javascript"></script>
+<!--日期插件-->
+<script src="../../static/assets/moment/moment-with-locales.js" type="text/javascript"></script>
+<script src="../../static/assets/pikaday/pikaday.js" type="text/javascript"></script>
+<!--树插件-->
+<script src="../../static/assets/dhtmlxtree/dhtmlxtree.js" type="text/javascript"></script>
+<!--公用js-->
+<script type="text/javascript" src="../../static/scripts/common/common.js"></script>
+<!--独立js-->
+<script type="text/javascript" src="js/manager.js"></script>
+<script>
+	$(function(){
+		niceForm("#defaultForm");
+		createPikaday('valid_data');
+		$(".form-section-content").hide();
+		$(".form-section-content").eq(0).show()
+
+		$(".form-section-btn").click(function(){
+			if($(this).hasClass('open')){
+				$(this).find("i").attr('class','fa fa-chevron-down')
+
+				$(this).removeClass('open')
+				$(this).parent().next().hide()
+
+			}else{
+				$(this).find("i").attr('class','fa fa-chevron-up')
+				$(this).addClass('open')
+				$(this).parent().next().show()
+				//$(this).parents('.form-section').siblings('.form-section').find('.form-section-content').hide();
+
+			}
+		})
+
+
+
+
+
+		//初始化组织机构树
+		var tree = new dhtmlXTreeObject("group_tree", "100%", "100%", 0);
+		tree.setImagePath("../../static/assets/dhtmlxtree/imgs/dhxtree_skyblue3/");
+		tree.enableCheckBoxes(1);
+		//tree.enableThreeStateCheckboxes(true);
+		tree.loadXML("../../data/tree.xml");
+
+
+		tree.attachEvent("onCheck", function(id,state){
+			var name = tree.getItemText(id);
+			if(state) {
+				addAssetGroup(id, name);
+			} else {
+				removeAssetGroupFromList(id);
+			}
+
+		});
+
+		//添加资产组
+		function addAssetGroup(id, name) {
+			var htmlStr = "<li><div class=\"asset-group-item-wrap\">" +
+					"<span>" + name + "</span>" +
+					"<a id=\"" + id + "\" class=\"remove-asset-group-action\" href=\"javascript: void(0);\"><i class=\"fa fa-times\"></i></a>" +
+					"</div></li>";
+
+			$("#addUser").before(htmlStr);
+		}
+
+		//移除资产组
+		function removeAssetGroupFromList(id) {
+
+			var $el = $("#asset_group_selected #" + id).parent().parent();
+			$el.remove();
+		}
+
+		function removeAssetGroupFromTree(id) {
+			tree.setCheck(id, false);
+		}
+
+		$("#asset_group_selected").on("click", ".remove-asset-group-action", function(){
+			var _id = $(this).attr("id");
+			removeAssetGroupFromList(_id);
+			removeAssetGroupFromTree(_id);
+		})
+
+		$("#addUser").on("click","a",function(){
+			$(".check-tree-warp").animate({right:'0px'})
+		})
+
+		$("#closeUsertree").on("click",function(){
+			$(".check-tree-warp").animate({right:'-200px'})
+		})
+	})
+</script>
+<!--<script>
+	$(document).ready(function() {
+		var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+		$('#defaultForm')
+				.bootstrapValidator({
+					message: 'This value is not valid',
+					feedbackIcons: {/*输入框不同状态，显示图片的样式*/
+						valid: 'glyphicon glyphicon-ok',
+						invalid: 'glyphicon glyphicon-remove',
+						validating: 'glyphicon glyphicon-refresh'
+					},
+					fields: {
+						clientName: {
+							message: '软件名称格式不合法',
+							validators: {
+								notEmpty: {/*非空提示*/
+									message: '软件名称不能为空'
+								},
+								stringLength: {/*长度提示*/
+									min: 1,
+									max: 30,
+									message: '软件名称长度必须在1-30之间'
+								},
+								regexp: {/*正则表达式验证*/
+									regexp: /^[a-zA-Z0-9_\.]+$/,
+									message: '软件名称只能是字母数字下划线句点组合'
+								}
+							}
+						},
+						softFlag: {
+							message: '软件标识不合法',
+							validators: {
+								notEmpty: {
+									message: '软件标识不能为空'
+								},
+								stringLength: {
+									min: 1,
+									max: 30,
+									message: '软件标识长度必须在1-30之间'
+								},
+								regexp: {
+									regexp: /^([0-9]|[a-zA-Z\u4E00-\u9FA5]|[-_\.()])+$/,
+									message: '软件标识必须是字母数字中文以及以下特殊字符-_.()'
+								}
+							}
+						},
+						clientDescription: {
+							message: '描述信息格式不合法',
+							validators: {
+								stringLength: {
+									max: 200,
+									message: '描述信息必须小于200个字'
+								},
+								regexp: {
+									regexp: /^([0-9]|[a-zA-Z\u4E00-\u9FA5]|[_\\\.]|[-@!#$%^&()/])+$/,
+									message: '描述信息格式不正确'
+								}
+							}
+						}
+					}
+				})
+				.on('error.form.bv', function(e) {
+					//console.log('error.form.bv');
+					//var $form = $(e.target);
+					//console.log($form.data('bootstrapValidator').getInvalidFields());
+
+					parent.layer.msg("检验失败，请仔细检查",{ icon:2 });
+
+				})
+				.on('success.form.bv', function(e) {
+
+					// Prevent form submission
+					e.preventDefault();
+
+					// Get the form instance
+					var $form = $(e.target);
+					var datas =  $form.serialize();
+					Manager.add(datas, function (ret) {
+
+						if (ret.success == true) {
+								$form.data('bootstrapValidator').resetForm(true);
+								parent.layer.close(index);
+								window.parent.reloadTable();
+								parent.layer.msg('添加成功',{icon: 1});
+
+						}else {
+							parent.layer.msg("添加失败，失败原因是："+ret.resultMsg,{ icon:2 });
+						}
+					});
+
+					/*	var bv = $form.data('bootstrapValidator');
+					 bv.bootstrapValidator('resetForm');*/
+
+
+				})
+
+		niceForm("#defaultForm");
+		createPikaday('valid_data')
+	});
+
+
+	$('#save_btn').click(function() {
+		$('#defaultForm').bootstrapValidator('validate');
+	});
+
+	$('#resetBtn').click(function() {
+		$('#defaultForm').data('bootstrapValidator').resetForm(true);
+	});
+
+</script>-->
+</body>
+</html>

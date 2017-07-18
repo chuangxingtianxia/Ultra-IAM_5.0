@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+body{
+    background: #f5f5f5 ;
+}
+.register-wrapper {
+    min-height: 100%;
+    background: #f5f5f5 none repeat scroll 0 0;
+}
+
+.register-header {
+    background: #e8e8e8 none repeat scroll 0 0;
+    padding: 10px 0;
+    width: 100%;
+}
+.register-header .header-content {
+    margin: 0 auto;
+    width:900px;
+    overflow: hidden;
+}
+
+
+.register-header .logo {
+    height: 50px;
+    display:block;
+    margin-right: 25px;
+    width: 210px;
+    line-height: 50px;
+    text-align: left;
+    font-size: 20px;
+    float: left;
+    position: relative;
+    padding-left: 50px;
+
+}
+.register-header .logo b{
+    font-size: 24px;
+    margin-right: 5px;
+}
+.register-header .logo:hover{
+    text-decoration: none;
+}
+.register-header .logo i{
+    font-size: 50px;
+    display: inline-block;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 55px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+
+}
+
+.register-header .header-content .switch-login {
+
+    float: right;
+
+    line-height: 50px;
+}
+.register-header .header-content .switch-login a{
+    color: #7d7d7d;
+    font-size: 14px;
+}
+.register-header .header-content .switch-login a:hover{
+    text-decoration: none;
+}
+
+.register-header .header-content .page-title {
+    border-left: 1px solid #929292;
+    color: #333;
+    float: left;
+    display: block;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 25px;
+    margin-top: 10px;
+}
+
+.register-body{
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 35px;
+    background: #fff;
+}
+
+.register-body .reg-title {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 2px solid #f5f5f5;
+    color: #222222;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.reg-box-pan{ padding:40px 40px 50px; width:100%;}
+.reg-box .part1,.reg-box .part2,.reg-box .part3{ padding-left:115px; padding-right: 115px;}
+.register-info{
+    padding:10px;
+    font-size: 12px;
+    background: #d9edf7;
+    margin-bottom: 25px;
+    border: 1px solid #bce8f1;
+
+    color: #31708f;
+}
+.register-footer{
+    font-size: 14px;
+    text-align: center;
+    padding: 30px;
+    color: #333;
+}
+/*step*/
+.step{ margin:0 auto; display:block; height:60px;}
+.step li{ position:relative; text-align:center;}
+.step .line_bg{ height:3px; background:#d9eaf3; display:inline-block; width:50%; top:13px; position:absolute; z-index:1;}
+.step .lbg-l{left:0;}
+.step .lbg-r{right:0;}
+.step .num{ position:relative; z-index:2; background:#fff;width:54px; height:30px;text-align:center; display:inline-block;}
+.step .num em,.num i{width:24px; height:24px; display:inline-block; left:15px; top:2px;position:absolute;}
+.step .num em{ background:#d9eaf3; border-radius: 5px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);z-index:2;}
+.step .num i{  z-index:3; color:#fff; font-style:normal; font-weight:700; top:4px;}
+.step .lbg-txt{ position:relative; color:#b6c6ce; font-size:13px;}
+.step .on .lbg-txt{color:#1a97d7;}
+.step .on .line_bg,.step .on .num em{ background:#1a97d7}
+
+
+/*part1*/
+.register-form{ width: 400px; margin: 0 auto;}
+.register-content .pass-item {
+    margin-bottom: 15px;
+
+}
+.register-content .pass-item .input-wrap {
+    height: 40px;
+    padding: 0px;
+    position: relative;
+}
+.register-content .pass-item .input-info{
+    color: #999;
+    font-size: 12px;
+    padding-top: 5px;
+}
+.register-content .pass-item .left-title{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    width: 70px;
+    text-align: left;
+}
+.register-content .pass-item .right-body{
+    height: 40px;
+    margin-left: 70px;
+    line-height: 40px;
+    color: #9b9ea0;
+}
+.register-content .pass-item .input-text {
+    background: #fff;
+    /*border-radius: 4px;*/
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 8px;
+    width: 100%;
+    border: 1px solid #c3c5c6;
+    color: #373d41;
+    font-size: 12px;
+    line-height: 40px;
+    padding-left: 60px;;
+}
+
+.register-content .pass-item .input-text[disabled]{
+    background:#f5f5f5 ;
+    color: #333;
+    border: 1px solid #c3c5c6;
+    cursor: inherit;
+}
+
+.register-content .pass-item .input-label{
+    color: #9b9ea0;
+    cursor: text;
+    font-weight: normal;
+    left: 60px;
+    position: absolute;
+    top: 12px;
+    font-size: 12px;
+
+}
+
+.register-content .pass-item .input-icon {
+    display: block;
+    height: 38px;
+    left:1px;
+    position: absolute;
+    top: 1px;
+    width: 40px;
+  /*  border-radius:4px ;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;*/
+    background: rgba(255, 255, 255, 0.1);
+    line-height: 40px;
+    color: #c3c5c6;
+    text-align: center;
+    border-right: 1px solid #c3c5c6;
+
+}
+
+.register-content .pass-item .yzm {
+    display: block;
+    height: 40px;
+    right: 0px;
+    position: absolute;
+    top: 0px;
+    width: 125px;
+    text-align: right;
+    padding-left: 25px;
+    background: #fff;
+    border-left: 1px solid #c3c5c6;;
+
+}
+.register-content .pass-item .yzm img{
+    height: 40px;  cursor: pointer;     border:1px solid #c3c5c6;
+}
+
+.register-content .pass-item .input-button {
+    display: block;
+    height: 40px;
+    right: 0px;
+    position: absolute;
+    top: 0px;
+    width: 150px;
+    text-align: right;
+    padding-left: 25px;
+    background: #fff;
+    border-left: 1px solid #c3c5c6;;
+
+}
+.register-content .pass-item .input-button button{  height: 40px; width: 125px; background: #f4f4f4 ;    border: 1px solid #d1d2d4;  cursor: pointer;
+}
+.register-content .pass-item .input-icon i{ font-size: 16px;}
+.register-submit{ width: 100%; overflow: hidden;}
+.register-submit .button{
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    height: 40px;
+    background:#00c1de;
+    backface-visibility: hidden;
+    position: relative;
+    vertical-align: middle;
+    z-index: 1;border: 1px solid #00c1de;
+    width: 48%;
+    display: block;
+    float: left;
+    text-align: center;
+    border-radius: 0px; cursor: pointer
+}
+.register-submit .button.other{
+    background: rgba(217, 83, 79, 0.3);
+    float: right;
+}
+
+.success { text-align: center; font-size: 16px;
+    color: #333;
+}
+.success h3{
+    text-align: center; font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+}

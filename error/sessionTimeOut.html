@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+	<title>会话已过期或未登录</title>
+	<script type="text/javascript">
+		var sec = 5;
+		var interval = setInterval(function(){
+			if(sec == 0) {
+				clearInterval(interval);
+				top.window.location.href = "/login.html";
+			}
+			document.getElementById("sec").innerHTML = sec;
+			sec--;
+		}, 1000);
+	</script>
+</head>
+<body>
+	<div>
+		<div>
+			<h1 style="color:red">
+				会话已过期或未登录
+			</h1>
+			<p>
+				会话已过期或未登录，将在<span id="sec">5</span>秒后跳转到登录页。
+			</p>
+		</div>
+	</div>
+</body>
+</html>

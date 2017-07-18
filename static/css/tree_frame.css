@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+.content-wrap {
+    position: relative;
+}
+
+.tree_wrap {
+    padding: 0;
+    width: 180px;
+    height: 100%;
+    background: #eaedf1;
+    position: fixed;
+    z-index: 999;
+}
+
+.tree_wrap .tree_title_wrap {
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 10px 0 10px;
+    width: 180px;
+    border-bottom: 1px solid #ddd;
+    /*  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);*/
+  /*  position: absolute;
+    z-index: 10;*/
+}
+
+.tree_wrap .tree_title_wrap .tree-title-holdplace {
+    height: 15px;
+    line-height: 15px;
+    margin-bottom: 3px;
+    padding: 0;
+    background-color: transparent;
+}
+
+.tree_wrap .tree_title_wrap .tree_title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color: #666;
+    font-weight: normal;
+    font-weight: bold;
+}
+
+.tree_wrap .tree_panel {
+    width: 100%;
+    position: absolute;
+    top: 155px;
+    bottom: 0;
+    background: #f8fcff;
+    padding: 8px 5px;
+}
+
+.content-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 180px;
+    right: 0;
+    overflow: hidden;
+    /* box-shadow: -1px 0px 5px 2px rgba(52,121,230,0.1);*/
+}
+
+.content-wrap .content_iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+}
+
+.tree-toggle {
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    right: 0;
+    background: #f1f1f1;
+    top: 50%;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.tree-toggle:hover {
+    border-width: 9px 18px 9px medium;
+}
+
+.tree-toggle i {
+    font-size: 12px;
+    color: #546478;
+}
+
+
+.search-warp{
+width: 100%; height: 100%;
+
+}
+.search-warp{
+    width: 100%;
+    padding: 5px;
+    background: #f8fcff;
+
+}
+.search-warp li{
+    width: 50%;
+    float: left;
+    padding: 5px;
+}
+.search-warp li a{
+    width: 100%;
+    background: #f5f5f5;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: #666;
+    border: 1px solid #f7fcff;
+}
+.search-warp li.selectd a{
+    background: #108cee;
+    border: 1px solid #108cee;
+    color: #fff;
+}
+.search-warp li a:hover{
+    text-decoration: none;
+}
+.search-warp .searchInput{
+    padding: 5px;
+}
+.searchInput input{
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    padding: 0 10px;
+    border: 1px solid #cccccc;
+}
